@@ -1,0 +1,12 @@
+Наидлиннейший палиндромный префикс - 1
+n = int(input())
+a = [0] * n
+for i in range(n):
+    s = str(input())
+    for j in range(len(s)):
+        s1 = s[:len(s)-j]
+        if str(s1) == str(s1)[::-1]:
+            a[i] = len(s1)
+            break
+for i in range(n):
+    print(a[i])
